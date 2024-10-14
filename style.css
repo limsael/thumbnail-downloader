@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #7d2ae8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 450px;
+}
+
+form header {
+  color: #7d2ae8;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+
+form .url-input {
+  margin: 30px 0;
+}
+
+.url-input .title {
+  font-size: 18px;
+  color: #373737;
+}
+
+.url-input .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 5px;
+  position: relative;
+}
+.url-input .field input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 15px;
+  background-color: #f1f1f7;
+  border-bottom: 2px solid #ccc;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.url-input .field .bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #7d2ae8;
+  scale: 0;
+  transition: scale 0.3s ease-in-out;
+}
+.url-input .field input:focus ~ .bottom-line,
+.url-input .field input:valid ~ .bottom-line {
+  scale: 1;
+}
+
+form .preview-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px dashed #7d2ae8;
+  border-radius: 10px;
+  height: 220px;
+  overflow: hidden;
+}
+.preview-area.active {
+  border: none;
+}
+.preview-area.active .thumnail {
+  display: block;
+}
+.preview-area .thumnail {
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+.preview-area .icon {
+  color: #7d2ae8;
+  font-size: 80px;
+}
+.preview-area span {
+  color: #7d2ae8;
+  margin-top: 25px;
+}
+.preview-area.active .icon,
+.preview-area.active span {
+  display: none;
+}
+
+form .download-btn {
+  height: 53px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #7d2ae8;
+  color: #fff;
+  margin: 30px 0 20px 0;
+  cursor: pointer;
+}
